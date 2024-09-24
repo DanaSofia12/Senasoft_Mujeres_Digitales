@@ -1,0 +1,17 @@
+package com.senasoft.mapper;
+
+import com.senasoft.dto.OrdenesDTO;
+import com.senasoft.model.Ordenes;
+
+public class OrdenesDTOMapper {
+	
+	public static OrdenesDTO toPacienteDTO(Ordenes ordenes) {
+		
+		if( ordenes == null) {
+			return null;
+		}else {
+			return OrdenesDTO.builder().id(ordenes.getId()).id_document(ordenes.getId_documento()).date(ordenes.getFecha()).build();
+		}
+	}
+
+}

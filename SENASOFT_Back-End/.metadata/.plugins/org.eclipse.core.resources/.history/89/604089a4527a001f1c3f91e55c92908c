@@ -1,0 +1,5 @@
+package com.senasoft.mapper;
+
+public class PacienteRowMapper {
+
+}

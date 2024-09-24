@@ -1,0 +1,9 @@
+package com.senasoft.repository;
+
+import com.senasoft.model.Ordenes;
+
+public interface OrdenesRepository {
+
+	Ordenes getOrdenesByPatient(Integer id);
+
+}

@@ -1,0 +1,21 @@
+package com.senasoft.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.senasoft.model.Ordenes;
+
+
+public class OrdenesRowMapper implements RowMapper<Ordenes> {
+
+	@Override
+	public Ordenes mapRow(ResultSet rs, int rowNum) throws SQLException {
+		
+		return Ordenes.builder().id(rs.getInt("id")).id_documento(rs.getInt("id_documento")).fecha(rs.getDate("fecha")).id_historia(rs.getInt("id_historia")).id_persona(rs.getInt("id_persona")).build();
+	}
+	
+	
+
+}

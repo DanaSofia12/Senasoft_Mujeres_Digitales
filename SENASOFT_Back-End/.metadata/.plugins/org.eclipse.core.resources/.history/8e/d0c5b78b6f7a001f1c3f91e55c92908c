@@ -1,0 +1,21 @@
+package com.senasoft.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.senasoft.dto.OrdenesDTO;
+import com.senasoft.mapper.OrdenesDTOMapper;
+import com.senasoft.model.Ordenes;
+import com.senasoft.repository.OrdenesRepository;
+
+public class OrdenesServiceImpl implements OrdenesService{
+	
+	@Autowired
+	OrdenesRepository ordenesRepository;
+
+	@Override
+	public OrdenesDTO getOrdenesByPatient(Integer id) {
+
+		return OrdenesDTOMapper.toPacienteDTO(ordenesRepository.getOrdenesByPatient(id));
+	}
+
+}

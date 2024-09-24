@@ -1,0 +1,5 @@
+package com.senasoft.service;
+
+public interface OrdenesService {
+
+}

@@ -1,0 +1,17 @@
+package com.senasoft.mapper;
+
+import com.senasoft.dto.PacienteDTO;
+import com.senasoft.model.Paciente;
+
+public class PacienteDTOMapper {
+	
+	public static PacienteDTO toPacienteDTO(Paciente paciente) {
+		
+		if( paciente == null) {
+			return null;
+		}else {
+			return PacienteDTO.builder().id(paciente.getId()).id_typeid(paciente.getId_tipoid()).numberid(paciente.getNumeroid()).surname1(paciente.getApellido1()).surname2(paciente.getApellido2()).name1(paciente.getNombre1()).name2(paciente.getNombre2()).datebirth(paciente.getFechanac()).id_sexbiological(paciente.getId_sexbiologico()).adress(paciente.getDireccion()).cel_movil(paciente.getTel_movil()).email(paciente.getEmail()).build();
+		}
+	}
+
+}

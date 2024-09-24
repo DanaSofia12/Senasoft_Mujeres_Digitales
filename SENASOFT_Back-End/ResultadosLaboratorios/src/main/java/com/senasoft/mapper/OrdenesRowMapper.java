@@ -1,0 +1,27 @@
+package com.senasoft.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.senasoft.model.Ordenes;
+
+
+public class OrdenesRowMapper implements RowMapper<Ordenes> {
+
+	@Override
+	public Ordenes mapRow(ResultSet rs, int rowNum) throws SQLException {
+        // Obtener Timestamp y convertirlo a LocalDateTime
+		
+        Timestamp timestamp = rs.getTimestamp("fecha");
+        LocalDateTime fecha = timestamp != null ? timestamp.toLocalDateTime() : null;
+		
+		return Ordenes.builder().id(rs.getInt("id")).id_documento(rs.getInt("id_documento")).orden(rs.getBigDecimal("orden")).fecha(fecha).build();
+	}
+	
+	
+
+}

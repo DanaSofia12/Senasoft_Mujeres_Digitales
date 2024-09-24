@@ -1,0 +1,36 @@
+package com.senasoft.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.senasoft.dto.OrdenesDTO;
+import com.senasoft.response.ResponseHandler;
+import com.senasoft.service.OrdenesService;
+import com.senasoft.utils.Utilities;
+
+@RestController
+@RequestMapping("/paciente/ordenes")
+@CrossOrigin (origins = "http://localhost:*")
+public class OrdenesController {
+	
+	@Autowired
+	OrdenesService ordenesService;
+	
+	@GetMapping("/consultar/{id}")
+    private ResponseEntity<Object> getOrdenesByPatient(@PathVariable Integer id) {
+        List<OrdenesDTO> ordenesDTO = ordenesService.getOrdenesByPatient(id);
+        return ordenesDTO != null && !ordenesDTO.isEmpty()
+                ? ResponseHandler.generateResponseSuccess(Utilities.MESSAGE_ORDER_FOUND, HttpStatus.OK, ordenesDTO)
+                : ResponseHandler.generateResponseSuccess(Utilities.MESSAGE_ORDER_NOT_FOUND, HttpStatus.OK, null);
+    }
+	
+
+}

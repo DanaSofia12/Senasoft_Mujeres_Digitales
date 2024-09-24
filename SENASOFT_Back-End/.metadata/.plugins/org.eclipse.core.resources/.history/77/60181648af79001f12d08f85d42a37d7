@@ -1,0 +1,5 @@
+package com.sistemaSalud.controller;
+
+public class AuthController {
+
+}

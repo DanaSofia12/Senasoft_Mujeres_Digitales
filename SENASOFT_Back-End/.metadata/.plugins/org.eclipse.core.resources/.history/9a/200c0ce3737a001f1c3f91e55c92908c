@@ -1,0 +1,28 @@
+package com.senasoft.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.senasoft.dto.OrdenesDTO;
+import com.senasoft.mapper.OrdenesDTOMapper;
+import com.senasoft.model.Ordenes;
+import com.senasoft.repository.OrdenesRepository;
+
+
+@Service
+public class OrdenesServiceImpl implements OrdenesService{
+	
+	@Autowired
+	OrdenesRepository ordenesRepository;
+
+	@Override
+	public List<OrdenesDTO> getOrdenesByPatient(Integer id) {
+
+        List<Ordenes> ordenes = ordenesRepository.getOrdenesByPatient(id);
+
+        return ordenes.stream().map(OrdenesDTOMapper::toOrdenesDTO).toList();  // Asegúrate de que estás usando Java 11 o superior
+	}
+
+}

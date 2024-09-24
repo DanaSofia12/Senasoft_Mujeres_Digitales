@@ -1,0 +1,9 @@
+package com.senasoft.service;
+
+import com.senasoft.dto.OrdenesDTO;
+
+public interface OrdenesService {
+
+	OrdenesDTO getOrdenesByPatient(Integer id);
+
+}

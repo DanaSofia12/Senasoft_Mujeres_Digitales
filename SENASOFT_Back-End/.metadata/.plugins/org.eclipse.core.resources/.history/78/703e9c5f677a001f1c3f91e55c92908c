@@ -1,0 +1,32 @@
+package com.senasoft.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.senasoft.mapper.PacienteRowMapper;
+import com.senasoft.model.Paciente;
+
+@Repository
+public class PacienteRepositoryImpl implements PacienteRepository {
+
+	@Autowired
+	JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public Paciente getPacienteById(Integer id) {
+
+		try {
+		StringBuilder query = new StringBuilder();
+		query.append("SELECT * ")
+				.append(" FROM gen_m_persona")
+				.append(" WHERE id = ?");
+		return jdbcTemplate.queryForObject(query.toString(), new PacienteRowMapper(), id);
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+		
+	}
+
+}
