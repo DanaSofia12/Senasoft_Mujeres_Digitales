@@ -1,0 +1,8 @@
+package com.senasoft.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class DetalleOrdenServiceImpl {
+
+}
