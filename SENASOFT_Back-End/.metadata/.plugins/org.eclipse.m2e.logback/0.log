@@ -1874,3 +1874,6 @@
 2024-09-24 18:47:35,573 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-09-24 18:47:35,582 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-09-24 18:47:35,585 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\SENASOFT_MUJERES_DIGITALES\SENASOFT_Back-End\ResultadosLaboratorios\src\test\resources
+2024-09-24 18:51:41,446 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-09-24 18:51:41,453 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-09-24 18:51:41,458 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\SENASOFT_MUJERES_DIGITALES\SENASOFT_Back-End\ResultadosLaboratorios\src\test\resources
