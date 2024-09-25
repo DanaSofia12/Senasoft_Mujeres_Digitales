@@ -17,7 +17,7 @@ import com.senasoft.utils.Utilities;
 
 @RestController
 @RequestMapping("/paciente")
-@CrossOrigin(origins = "http://localhost:*")
+@CrossOrigin(origins = {"*"})
 public class PacienteController {
 	
 	@Autowired

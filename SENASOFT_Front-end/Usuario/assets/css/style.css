@@ -15,7 +15,8 @@
 :root{
   --color-tex: #264653; /* Color texto titulos y subtitulos */
   --color-acentos: #2A9D8F;  /* Color acentos hover y bases */
-  --bg-color: #ffffff; /* Color de fondo  */
+  --bg-color: #ffffff; /* Color de fondo 1  */
+  --bg-color2: #d8ebe8; /* Color de fondo 2  */
 
 
 }
@@ -118,7 +119,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #6776f4;
+  background: var(--color-tex);
   color: #fff;
 }
 
@@ -408,7 +409,7 @@ h6 {
   z-index: 997;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: var(--bg-color2);
   padding-left: 20px;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -637,7 +638,7 @@ h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: var(--bg-color2);
 }
 
 @media (max-width: 1199px) {
@@ -1264,7 +1265,7 @@ h6 {
 .main thead tr th{
   color: var(--color-acentos);
 }
-.main tbody{
+#dataBody{
   cursor: pointer;
 }
 .main #pagination {
@@ -1300,7 +1301,35 @@ h6 {
   
 }
 
+.paginacion-detalles .page-link{
+  color: var(--color-tex);
+}
+.paginacion-detalles .page-item.disabled .page-link {
+  color: #ca1414; /* Color para los enlaces deshabilitados */
+}
 
+/*--------------------------------------------------------------
+# Perfil paciente
+--------------------------------------------------------------*/
+.main .bienvenida{
+  box-shadow: 0 4px 20px rgba(42, 157, 144, 0.473); 
+  min-height: 558px;
+}
+.main .datosPerfil{
+  min-width: 228px;
+  min-height: 166px;
+  
+}
+.main .dp{
+  box-shadow: 0 4px 20px rgba(38, 70, 83, 0.514) ;
+}
+.main .dp:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.main .card{
+  padding: 20px;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
