@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard Paciente - Detalle</title>
+  <title>Dashboard Paciente</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -18,12 +18,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-
-  <!-- CDN BOOTSTRAP -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- CDN BOOTSTRAP ICONOS-->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <!-- CDN BOXICONS -->
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
@@ -43,6 +39,7 @@
 </head>
 
 <body>
+
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -155,137 +152,92 @@
 </aside><!-- Fin barra al costado-->
 
   <main id="main" class="main">
-
     <section class="section">
-      <!-- Pagination with icons -->
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav><!-- End Pagination with icons -->
-
 
       <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <label for="nombre" class=" col-form-label"  required >Paciente</label>
-            <input type="text" class="form-control" id="paciente" name="paciente" >
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <label for="identificacion" class=" col-form-label"  required >Identificación</label>
-            <input type="text" class="form-control" id="identificacion" name="identificacion" >
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <label for="telefono" class=" col-form-label"  required >Telefono</label>
-            <input type="text" class="form-control" id="telefono" name="telefono" >
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <label for="sexo" class=" col-form-label"  required >Sexo</label>
-            <input type="text" class="form-control" id="sexo" name="sexo" >
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <label for="medico" class=" col-form-label"  required >Medico</label>
-            <input type="text" class="form-control" id="medico" name="medico" >
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <label for="fechaOrden" class=" col-form-label"  required >Fecha orden</label>
-            <input type="date" class="form-control" id="fechaOrden" name="fechaOrden" >
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <label for="admiSalud" class=" col-form-label"  required >Administradora de salud</label>
-            <input type="text" class="form-control" id="admiSalud" name="admiSalud" >
-        </div>
-      </div>
-      <hr>
-      <br>
-      <div class="row">
-        <div class="col-lg-6 col-md-3">
-          <div class="pagetitle">
-            <h1 id="grupo">Nombre Grupo</h1> <br>
-            <h5 id="procedimiento"> Nombre procedimiento</h5>
+        <div class="col-lg-6">
+          <div class="card bienvenida">
+            <h3>Bienvid@ al portal</h3>
+          <h5>Siempre es un placer tenerte de vuelta</h5>
+          <img src="assets/img/Bienvenida.jpg" alt="">
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-3">
-          <div class="btn-group" role="group" aria-label="Descargas">
-            <button id="descargarExcel" class="btn ">
-                <i class="bi bi-file-earmark-spreadsheet"></i> Descargar Excel
-            </button>
-            <button id="descargarPdf" class="btn ">
-                <i class="bi bi-file-earmark-pdf"></i> Descargar PDF
-            </button>
+
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Tipo de identificación</h5>
+                
+                <p>Tajeta de identidad</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Número de identificación</h5>
+                <p>12123123123</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Nombre completos</h5>
+                <p>Lorena Sastoque Rodriguez</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Sexo de nacimiento</h5>
+                <p>Femenino</p>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Fecha de nacimiento </h5>
+                <p>12/12/2012</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card datosPerfil dp">
+                <h5 class="card-title">Direccion de residencia</h5>
+                <p>Carrera 87d #54 sur 43</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      
 
-      <div class="row">
-        <!-- Table con los detalles de la orden -->
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Código de la prueba</th>
-              <th scope="col">Nombre de la prueba</th>
-              <th scope="col">Resultado</th>
-              <th scope="col">Valores de referencia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Brandon Jacob</td>
-              <td>Designer</td>
-              <td>28</td>
-
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Bridie Kessler</td>
-              <td>Developer</td>
-              <td>35</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Ashleigh Langosh</td>
-              <td>Finance</td>
-              <td>45</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Angus Grady</td>
-              <td>HR</td>
-              <td>34</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Raheem Lehner</td>
-              <td>Dynamic Division Officer</td>
-              <td>47</td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- Final tabla con detalles de la orden-->
-      </div>
-    </section>
     
-  </main><!-- End #main -->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card dp">
+                <h5 class="card-title"> Número de celular</h5>
+                <p>312 456 7890</p>
+            </div>
 
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="card dp">
+                <h5 class="card-title">Correo Electrónico</h5>
+                <p>Lorena34@gmail.com</p>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -312,68 +264,9 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <!-- Biblioteca de SheetJS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-
-  <!-- Biblioteca jsPDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    // Función para descargar la tabla como Excel
-  document.getElementById('descargarExcel').addEventListener('click', () => {
-      // Obtener la tabla
-      const table = document.querySelector('table');
-      const wb = XLSX.utils.table_to_book(table, { sheet: "Detalles" });
-
-      // Descargar el archivo Excel
-      XLSX.writeFile(wb, "detalles.xlsx");
-  });
-
-  // Función para descargar la tabla como PDF
-  document.getElementById('descargarPdf').addEventListener('click', () => {
-      const { jsPDF } = window.jspdf; // Acceder a jsPDF
-
-      const doc = new jsPDF();
-
-      // Agregar título
-      doc.setFontSize(18);
-      doc.text("Detalles de la Orden", 14, 20);
-
-      // Configurar la posición inicial para los datos de la tabla
-      let ejeY = 30;
-      doc.setFontSize(12);
-
-      // Agregar encabezados de la tabla
-      doc.text("Código de la prueba", 14, ejeY);
-      doc.text("Nombre de la prueba", 70, ejeY);
-      doc.text("Resultado", 140, ejeY);
-      doc.text("Valores de referencia", 180, ejeY);
-
-      // Obtener las filas de la tabla
-      const rows = document.querySelectorAll('table tbody tr');
-
-      // Agregar los datos de cada fila
-      rows.forEach((row, index) => {
-          const columnas = row.querySelectorAll('td, th');
-          const data = Array.from(columnas).map(col => col.innerText);
-          
-          ejeY += 10; // Espacio entre filas
-          doc.text(data[0], 14, ejeY);
-          doc.text(data[1], 70, ejeY);
-          doc.text(data[2], 140, ejeY);
-          doc.text(data[3], 180, ejeY);
-      });
-
-      // Guardar el archivo PDF
-      doc.save("detalles.pdf");
-  });
-
-
-
-  </script>
 
 </body>
 
